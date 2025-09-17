@@ -18,4 +18,8 @@ public with sharing class AccountSelector extends fflib_SObjectSelector implemen
 		return Account.SObjectType;
 	}
 
+	public List<Account> selectById(Set<Id> idSet){
+		return (List<Account>) selectSObjectsById(idSet);
+	}
+
 }
